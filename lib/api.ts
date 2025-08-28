@@ -13,7 +13,7 @@ interface Params {
   tag?: string;
 }
 
-const myKey = process.env.NEXT_PUBLIC_NOTES_TOKEN;
+const myKey = process.env.NEXT_PUBLIC_NOTES_NEW_TOKEN;
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
 const notesUrl = `${baseUrl}/notes`;
 
