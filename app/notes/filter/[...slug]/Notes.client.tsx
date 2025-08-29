@@ -71,13 +71,12 @@ export default function NotesClient({ initialData,initialTag }: NotesClientProps
       {isError && <ErrorMessage />}
       {data && isSuccess && (
         <>
-          {data.notes.length > 0 ? (
-            <NoteList notes={data.notes} />
-          ) : (
-            <div className={css.emptyState}>
-              <p>No notes found. Create your first note!</p>
-            </div>
-          )}
+         {data?.notes?.length > 0 ? (
+  <NoteList notes={data.notes} />
+) : (
+  <div className={css.emptyState}>Немає нотаток</div>
+)}
+
         </>
       )}
       {isModalOpen && (

@@ -13,9 +13,9 @@ interface Params {
   tag?: string;
 }
 
-const myKey = process.env.NEXT_PUBLIC_NOTES_NEW_TOKEN;
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
-const notesUrl = `${baseUrl}/notes`;
+const notesUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+const myKey = process.env.NEXT_PUBLIC_NOTES_TOKEN!;
+
 
 export async function fetchNotes(
   searchValue: string = '',
